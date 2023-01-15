@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,400&family=Poppins:wght@400;500;600&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+:root{
+    --white:#fafdfc;
+    --whiteHover:hsl(160 42.9% 98.6% / .2) 
+    --gray: rgba(0,0,0,.30);
+    --text:#060c0a;
+    --green:#1e3932;
+    --lgreen:#006241;
+    --vibrant-green:#00754a;
+    --greenHover:hsl(164 31% 17.1% / .1);
+    --lightgreen:#d4e9e2;
+}
+body{
+    font-family: 'Open Sans',sans-serif;
+    color: var(--green);
+}
+.wraaper{
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+}
+/* Headers */
+.h1{
+    font-weight: 800!important;
+    font-size: 50rem
+}
+.h3{
+    font-weight: 600;
+    font-size: clamp(19px, 3vw + 2rem, 28px);
+    letter-spacing: .01em;
+}
+/* btns */
+.btn{
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 1rem;
+    padding: .3rem 1.3rem;
+    transition: background-color 200ms ease-in-out;
+}
+.btn--light{
+       min-width: 35px;
+       min-height: 35px;
+       border: 1px solid var(--green);
+       color: var(--green);
+       background-color: transparent;
+}
+.btn--light:is(:hover,:focus){
+    border: 1px solid var(--green);
+    color: var(--green);
+    background-color: var(--greenHover); 
+}
+.btn--outline-green{
+    border: 1px solid var(--white);
+    color: var(--lightgreen);
+    background-color: transparent
+
+}
+.btn--outline-green:is(:hover,:focus){ 
+    border: 1px solid var(--green);
+    color: var(--vibrant-green);
+    background-color:#d4e9e2; 
+}
+nav button{
+    border-radius: 50px;
+    padding: 7px 16px;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-dark-outline{
+    border-color:#000;
+    color: #000;
+}
+.btn-dark-outline:hover{
+    background-color: rgba(0,0,0,0.06);
+    cursor: pointer;
+}
+.btn-dark{
+    background-color: #000;
+    color: #fff;
+}
+.btn-dark:hover{
+    background-color: #333;
+    cursor: pointer;
+}
+
+
+/* nav sections */
+nav a{
+    color: #000;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: var(--lgreen);
+}
+nav ul{
+    list-style: none;
+}
+.navbar-nav-right img{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar{
+    /* width: 100%; */
+    /* height: auto; */
+    background-color: #ffff;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 10%),0 2px 2px rgb(0 0 0 / 6%),0 0 2px rgb(0 0 0 / 7%) ;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+}
+.navbar li{
+    margin: 0 15px;
+    font-weight: bold;
+}
+.nav-item{
+    padding-right: 25rem;
+}
+.navbar-nav-left{
+    text-transform: uppercase;
+    flex: 1;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+.bt{
+    padding: 1rem 1rem 0 0;
+}
+.navbar-nav-right li:first-child a{
+    display: flex;
+    align-items: center;
+}
+/* sections */
+main{
+    display: grid;
+    gap: 2rem;
+    max-width: 1440px;
+    margin: auto;
+}
+section{
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+section.reverse{
+    flex-wrap: wrap-reverse; 
+}
+.section1,.section2{
+    background-color: var(--lightgreen);
+    color: var(--green);
+}
+.section3,.section4{
+    background-color: var(--lgreen);
+    color: var(--white);
+}
+.flex-child{
+    display: grid;
+    justify-items: center;
+    margin: auto;
+    gap: 2rem;
+    padding: 2rem;
+}
+@media screen and (min-width:768px){
+    .flex-child{
+     flex: 1 1 40%;
+    }
+}
+.flex-child-img{
+    padding: 0;
+}
+/* footer */
+.social{
+    padding-left: 30rem;
+}
+.footer-para{
+    text-align: center;
+    padding-left: 2rem;
+}
+.footer-cotainer{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 30px 30px;
+}
+.social img{
+    width: 35px;
+    height: 35px;
+}
+.social a{
+    text-decoration: none;
+    margin-right: 20px;
+}
+.social{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.divider{
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 40px auto;
+}
